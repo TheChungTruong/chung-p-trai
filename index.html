@@ -1,0 +1,217 @@
+<!-- nhan phim ! + tab -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Band</title>
+    <!-- link duong dan ảnh icon biểu tượng trược đường dẫn -->
+    <link rel="icon" href="./assets/image/fly.jpg" type="image/x-icon" />
+    <!-- link duong dan css vao = link + tab, duong dan cung cap ta su dung (./) -->
+    <link rel="stylesheet" href="./assets/css/stype.css">
+    <!-- link sữ dụng icon -->
+    <link rel="stylesheet" href="./assets/icon/themify-icons-font/themify-icons/themify-icons.css">
+</head>
+<body>
+    <!-- viet mot the div chua toan bo the khac ta dung thuoc tinh id va thuong dat ten: wrapper(bao boc), main(phan chinh), app(ung dung) -->
+
+    <!-- muon tao ra thuoc tinh class dung = .thuoctinh -->
+    <!-- muon tao ra thuoc tinh id dung = #thuoctinh -->
+
+    <!-- thẻ div là thẻ cha của thẻ ul, ul là thẻ cha của il, li là thẻ cha cua a -->
+<div id="main">
+    <!-- dua bon thanh phan chinh = 4 cai id -->
+    <!-- cach moi id mot khoang trong -->
+    <!-- de tranh trung ten id ta dung class lam the con cho the id -->
+    <!-- de chon cung ten id or class ta boi den roi nhan Ctrl + D -->
+    <div id="header">
+        <!-- cách tạo ra 5 thẻ bên dưới dùng   ul#nav>li*5>a -->
+        <!-- thẻ a là thẻ văn bản -->
+        <!-- dùng thẻ li để khi nào chon được toàn bộ từ Home đến Contact -->
+        <ul id="nav">
+            <!-- để dấu # thì nó tự động nhảy lên đầu trang -->
+            <li><a href="#">Home</a></li>
+            <li><a href="#band">Band</a></li>
+            <li><a href="#tour">Tour</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- thàng More không link đi đâu cả nên không phần id của nó nên viết # -->
+            <!-- thêm icon mủi tên đi xuống năm trong More -->
+            <li><a href="#">
+                More
+                <!-- đặt tên cho class không gọi trực tiếp -->
+                <i class="nav-arrow-down ti-angle-down"></i>
+            
+                </a>
+                <!-- cách tạo ra 3 thẻ bên dưới dùng   ul.nav>li*3>a -->
+                <ul class="subnav">
+                    <li><a href="#">merchandise</a></li>
+                    <li><a href="#">Extras</a></li>
+                    <li><a href="#">Media</a></li>
+                </ul>
+            
+            </li>
+
+        </ul>
+        <!-- thẻ search là nằm trong phần headre -->
+     <div class="search-btn">
+         <i class="search-icon ti-search"></i>
+     </div>
+    </div>
+
+    <div id="slider">
+        <!-- thẻ ghi nội dung văn bản trong ảnh -->
+        <div class="text-content">
+            <!-- sữ dụng thẻ h2 là tiêu đề -->
+            <h2 class="text-heading">Chicago</h2>
+            <div class="text-descripton">Thank you, Chicago - A night we won't forget.</div>
+        </div>
+
+    </div>
+
+    <div id="content">
+       
+        <div id="band" class="content-section">
+            <h2 class="section-heading">THE BAND</h2>
+            <p class="section-sub-heading">We love music</p>
+            <p class="about-text">
+                We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div class="member-list">
+                <div class="member-item">
+                    <div class="member-name">name</div>
+                    <img src="\w3_band\assets\image\band\member1.jpg" alt="name" class="member-img">
+                </div>
+                <div class="member-item">
+                    <div class="member-name">name</div>
+                    <img src="\w3_band\assets\image\band\member1.jpg" alt="name" class="member-img">
+                </div>
+                <div class="member-item">
+                    <div class="member-name">name</div>
+                    <img src="\w3_band\assets\image\band\member1.jpg" alt="name" class="member-img">
+                </div>
+                <!-- để khắc phục việc thẻ list không ôm trọn cả ba thẻ con bên trong -->
+                <div class="clear"></div>
+            </div>      
+        </div>
+        <!--   SECTION TOUR    -->
+        <div id="tour" class="tour-section">
+
+            <div class="content-section">
+                <h2 class="section-heading text-white">TOUR DATES</h2>
+                <p class="section-sub-heading text-white">Remember to book your tickets!</p>
+                <!-- TICKET -->
+                <ul class="tickets-list">
+                    <li>September <span class="sold-out">Sold-out</span></li>
+                    <li>October <span class="sold-out">Sold-out</span></li>
+                    <li>November <span class="quantity">3</span></li>
+                </ul>
+                <!-- PLACES -->
+                <div class="places-list">
+                    <div class="place-item">
+                        <!-- thẻ chứa ảnh -->
+                        <img src="/w3_band/assets/image/places/place1.jpg" alt="New York" class="place-img">
+                        <!-- thẻ chứa văn bản -->
+                        <div class="place-body">
+                            <h3 class="place-heading">New York</h3>
+                            <p class="place-time">Fri 27 Nov 2016</p>
+                            <p class="place-desciption">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <a href="#" class="btn">Buy tickets</a>
+
+                        </div>
+                    </div>
+
+                    <div class="place-item">
+                        <!-- thẻ chứa ảnh -->
+                        <img src="/w3_band/assets/image/places/place2.jpg" alt="Paris" class="place-img">
+                        <!-- thẻ chứa văn bản -->
+                        <div class="place-body">
+                            <h3 class="place-heading">Paris</h3>
+                            <p class="place-time">Sat 28 Nov 2016</p>
+                            <p class="place-desciption">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <a href="#" class="btn">Buy tickets</a>
+
+                        </div>
+                    </div>
+
+                    <div class="place-item">
+                        <!-- thẻ chứa ảnh -->
+                        <img src="/w3_band/assets/image/places/place3.jpg" alt="San Francisco" class="place-img">
+                        <!-- thẻ chứa văn bản -->
+                        <div class="place-body">
+                            <h3 class="place-heading">San Francisco</h3>
+                            <p class="place-time">Sun 29 Nov 2016</p>
+                            <p class="place-desciption">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <a href="#" class="btn">Buy tickets</a>
+
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!--  SECTION CONTACT  -->
+        <div id="contact" class="content-section">
+            <!-- chú ý cách sữ dụng css trong html -->
+            <h2 class="section-heading">CONTACT</h2>
+            <p class="section-sub-heading">Fan? Drop a note!</p>
+            <!-- cú pháp .row>.col.col-half*2 -->
+            <div class="row contact-content">
+                <!-- chứa thông tin liên hệ -->
+                <div class="col col-half contact-info">
+                    <p> <i class="ti-location-pin icon">Chicago, US</i></p>
+                    <p> <i class="ti-mobile icon">Phone: +00 151515</i></p>
+                    <p> <i class="ti-email icon">Email: mail@mail.com</i></p>   
+                </div>
+                <!-- chứa nội dung đăng nhập -->
+                <div class="col col-half contact-form">
+                    <form action="">
+                        <div class="row">
+                            <div class="col col-half">
+                                <input type="text" name="" placeholder="Name" required  id="" class="form-control">
+                            </div>
+
+                            <div class="col col-half">
+                                <input type="email" name="" placeholder="Email" required id="" class="form-control">
+                            </div>
+                            
+
+                        </div>
+                        <div class="row mt-8">
+                            
+                            <div class="col col-full">
+                                <input type="text" name="" placeholder="Message" required id="" class="form-control">
+                            </div>
+
+                        </div>
+                        <input class="btn pull-right mt-16" type="submit" value="SEND">
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <div class="map-section">
+            <img src="./assets/image/map.jpg" alt="map">
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div class="socials-list">
+            <a href=""><i class="ti-facebook"></i></a>
+            <a href=""><i class="ti-instagram"></i></a>
+            <a href=""><i class="ti-youtube"></i></a>
+            <a href=""><i class="ti-pinterest"></i></a>
+            <a href=""><i class="ti-twitter"></i></a>
+            <a href=""><i class="ti-linkedin"></i></a>
+        </div>
+        <p class="coppyright">Powered by <a href="">w3.css</a></p>
+
+    </div>
+
+
+
+
+</div>
+</body>
+</html>
