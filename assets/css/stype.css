@@ -1,0 +1,462 @@
+/* Reset css */
+/* ghi chu nhanh ta dung to hop phim (Ctrl /) */
+
+/* (* is selection all css) */
+*{
+    /* go phim d + tab */
+    padding: 0;
+     /* go phim m + tab */
+    margin: 0;
+     /* go phim box + tab with b + tab*/
+    box-sizing: border-box;
+}
+/* PHẦN CHUNG */
+
+/* tất cả các đoạn văn bản đều trong trạng thái mặc định sau */
+html {
+    /* tạo hiệu ứng cuộn trang */
+    scroll-behavior: smooth;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* dùng elemen giả để thay thế<div class="clear"></div> */
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.mt-8 {
+    margin-top: 8px !important;
+}
+ 
+.mt-16 {
+    margin-top: 16px !important;
+    margin-right: 8px !important;
+}
+.clear {
+    clear: both;
+}
+/* tạo một class sữ dụng nhiều lần, có sức mạnh ưu tiên nhất */
+.text-white {
+    color: #fff !important;
+}
+.col {
+    float: left;
+    padding-left: 8px ;
+    padding-right: 8px;
+
+}
+.col-full {
+    width: 100%;
+}
+.col-half {
+    width: 50%;
+}
+.col-third {
+    width: 33.33333%;
+}
+.pull-right {
+    float: right;
+}
+/* phần này dùng chung cho tất cả nút nhấn */
+.btn {
+    /* tạo bàn tay */
+    cursor: pointer;
+    color: #fff;
+    background: #000;
+    /* bỏ gạch chân */
+    text-decoration: none;
+    padding: 11px 16px;
+    /* tạo khối không cho chồng lên nội dung khác */
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+    }
+    .btn:hover {
+        color: #000;
+        background-color: #ccc;
+       
+    }
+/* cach chon ten thanh phan chinh:
+b1: chon thanh phan giong nhau
+b2: nhan t/h phim de chon tat ca: Ctrl+Shift+L
+b3: nhan mui ten sang phai, sau do nhan Alt + Shift + end
+b4: coppy + past */
+
+/* cach chon tat cac va them toan bo ki hieu:
+b1: dua con tro chuot vao noi can them ki hieu, nhan Alt + di chuyen con tro den noi vi tri co cung ki hieu.
+b2: Alt + Shift roi nhan phim end de den cuoi chu */
+
+/*  trước khi thực hiền tưng thành phân ta đặt câu hỏi sau
+1. vị trí.
+2. kích thước(width, height)
+3. màu sắc.
+4. kiểu dáng ( định dạng chữ, hình tròn,..) */
+
+#main {
+
+}
+/* giúp chó phần list bao bọc được cả ba ảnh */
+
+#header {
+    height: 46.5px;
+    background-color: #000;
+    /* cố định thanh header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* làm cho header nỗi trên toàn bộ thuộc tính khác */
+    z-index: 1;
+}
+/* đưa biểu tượng kính lúp nằm bên phải header */
+#header .search-btn {
+    float: right;
+    padding: 0 21px;
+    
+}
+/* di vào biểu tượng kính lúp thì chuyển sang màu đỏ */
+#header .search-btn:hover {
+    background-color: #f44336;
+    /* di vào có hình bàn tay */
+    cursor: pointer;
+}
+/* định dạng biểu tượng search */
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+    /* chỉnh kích thước in đậm, bằng chiều ngang của header */
+    line-height: 46px;
+}
+/* phần nav chỉ hiện thị cho đến hết nó thôi */
+#nav {
+    display: inline-block;
+}
+#nav, .subnav {
+    /* bỏ mấy dấu chấm đi */
+    list-style-type: none;
+}
+/* chỉnh sửa thuộc tính của icon */
+#nav .nav-arrow-down {
+    /* mặc định kích thước của icon là 16px */
+    font-size: 12spx;
+}
+
+#nav > li {
+ /*chỉ hien thi theo chieu ngang trong the li cấp một */
+ display: inline-block;
+}
+/* di vào thẻ li thì hiện thị thuộc tính subnav */
+#nav li:hover .subnav {
+    display: block;
+}
+#nav li {
+    /* sự dụng vị trí thẻ li lam gốc tọa độ, cố định */
+    position: relative;
+}
+/* lấy trực tiếp vao thẻ a cấp một không liên qua đến cấp hai */
+#nav >li >a {
+    /* đổi màu chữ thành màu trắng */
+    color: #fff;
+    /* đổi thành in hoa */
+    text-transform: uppercase;
+} 
+/* thẻ a là thẻ chữ nên ta có thể chỉnh sửa trong thẻ a */
+#nav li a {
+    
+    /* bỏ dấu gạch chân đi */
+    text-decoration: none;
+    /* cách căn giữa ta dùng kính thước của line-height */
+    line-height: 46.5px;
+    /* chỉnh khoảng cách giữa các chữ sử dụng padding (padding trên-dưới trái-phải */
+    padding: 0 24px;
+    /* bôi đậm thừa hưởng cả chiều ngang */
+    display: block;
+    
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+
+/* đổi màu cho chữ cấp hai */
+#nav .subnav a {
+    color: #000;
+    padding: 0 22px;
+    line-height: 38px;
+}
+/* cách gói class dùng .thuoctinh */
+
+#nav .subnav {
+    /* làm ẩn ba cái thuộc tính trong More */
+    display: none;
+    /* để dính trên thẻ cha */
+    top: 100%;
+    /* để căn trái */
+    left: 0;
+    /* thẻ con lấy thẻ cha có position gần nhất làm gốc tọa độ */
+    position: absolute;
+    background-color: #fff;
+    /* tạo bóng đổ */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* chiều ngang tối thiểu, nhằm tăng chiều ngang, content dài ra thì nó cũng dài ra */
+    min-width: 160px;
+}
+
+#slider {
+    position: relative;
+    /* không để phần slide chồng lên */
+margin-top: 46px;
+/* kích thước chiều dọc bằng 50% chiều ngang */
+padding-top: 50%;
+/* lấy ảnh làm nền */
+background: url('/w3_band/assets/image/slider/slider1.jpg') top center / cover no-repeat;
+}
+#slider .text-content {
+    /* thành phần phụ thuộc vào relative */
+    position:absolute;
+    /* chữ cách mé dưới của ảnh 48px */
+    bottom: 48px;
+    /* đổi màu */
+    color: #fff;
+    /* căn giữa cách khác là width: 100% or right:0, left:0*/
+    left: 50%; 
+    transform: translate(-50%);
+    text-align: center;
+    }
+
+    #slider .text-heading {
+        /* giam độ dày từ 300-700 */
+    font-weight: 500;
+    font-size: 24px;
+    }
+    
+    #slider .text-descripton {
+        font-size: 15px;
+        margin-top: 25px;
+    }
+    
+#content {
+
+}
+
+#content .content-section {
+    width: 800px;
+    padding: 46px 0 112px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading {
+    /* chỉnh kích thước chữ */
+font-size: 30px;
+/* làm mỏng chữ lại */
+font-weight: 500;
+/* căn giữa */
+text-align: center;
+/* tăng khoảng cách giữ các chữ cái */
+letter-spacing: 4px;
+}
+#content .section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    /* tăng khoảng cách giữa các dòng */
+    margin-top: 25px;
+    /* chuyển kiểu chữ sang chữ nghiêng */
+    font-style: italic;
+    /* làm mờ chữ, giá trị nằm trong khoảng 01-1*/
+    opacity: 0.6;
+}
+#content .about-text {
+    margin-top: 25px;
+    font-size: 15px;
+     /* căn đều văn bản  */
+     text-align: justify;
+     /* khoảng cách các dòng trong văn bản, 1.4 cho tiếng anh và 1.6 cho tiếng việt */
+    line-height: 1.4;
+}
+
+#content .member-item {
+    /* vì thẻ div cho dạng khối, nên để chỉ 3 ảnh trên một hàng  */
+    float: left;
+    /* mỗi anh chiếm 1/3 chiều ngang, cách khác  width:calc(100%)  */
+    width: 33.33333%;
+    /* căn giữa cả name cả ảnh */
+    text-align: center;
+}
+#content .member-list {
+/* nới khoảng cách giữa văn bản và phần team */
+    margin-top: 48px;
+    
+}
+/* định dạng lại chữ viết */
+#content .member-name {
+    font-size: 15px;
+   
+}
+#content .member-img {
+    /* chữ "name" cách ảnh 15px  */
+    margin-top: 15px;
+    width: 154px;
+    /* bo khung ảnh */
+    border-radius: 4px;
+}
+/* SECTION TOUR */
+.tour-section {
+    background-color: #000;
+}
+
+.tickets-list {
+    background-color: #fff;
+    /* bỏ dấu chấm đâu dòng */
+    list-style: none;
+    /* tạo khoảng cách */
+    margin-top: 40px;
+}
+
+.tickets-list li {
+    /* đổi màu chữ */
+color: #757575;
+    /* thay đổi kích thước chữ */
+font-size: 15px;
+/* nới rông khoảng cách các hàng */
+padding: 11px 16px;
+/* tạo đường ngăn cách giữ các hàng */
+border-bottom: 1px solid #ddd;
+}
+
+.tickets-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    /* mở rộng vùng đỏ ra */
+    padding: 3px 4px;
+    /* tạo khoảng cách giữa tháng và vùng đỏ */
+    margin-left: 16px;
+}
+
+.tickets-list .quantity {
+    /* cho nằm về phía bên trái */
+    float: right;
+    height: 24px;
+    width: 24px;
+    background-color: #000;
+    color: #fff;
+    /* tạo nền hình tròn */
+    border-radius: 50%;
+    /* căn giữa theo chiều ngang */
+    text-align: center;
+    /* căn giữa theo chiều trên xuống */
+    line-height: 24px;
+    /* dịch lên một xíu cho nó cân  */
+    margin-top: -3px;
+}
+/* PLACES */
+.places-list {
+    /* tạo khoảng cách giữa phần trên và phần dưới */
+margin-top: 32px;
+margin-left: -8px;
+margin-right: -8px;
+/* cho vùng đen bao phủ dải ra thêm ít nữa */
+/* padding-bottom: 48px; */
+}
+
+.place-item {
+    /* chuyển về một hàng */
+float: left;
+/* cho tỉ lệ ba phần cần xứng */
+width: 33.33333%;
+padding: 0 8px;
+}
+
+.place-img {
+    /* để ảnh tỉ lệ với nội dung */
+width: 100%;
+/* xóa bỏ đường viền ngăn ảnh với nội dung */
+display: block;
+}
+/* tạo hiệu ứng khi đưa trỏ chuột vào ảnh */
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+font-size: 15px;
+background-color: #fff;
+/* tạo lề */
+padding: 16px;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time {
+    /* tạo khoảng cách giữa hai nội dung */
+margin-top: 15px;
+color: #757575;
+}
+
+.place-desciption {
+       /* tạo khoảng cách giữa hai nội dung */
+margin-top: 15px;
+/* tăng khoảng cách giữa các chữ cái */
+line-height: 1.4;
+}
+
+
+/* CONTACT FORM */
+.contact-content {
+    /* tạo khoảng cách với phần trên */
+    margin-top: 48px;
+}
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+/* .contact-info .icon {
+    width: 30px;
+    display: inline-block;
+} */
+
+.contact-form .form-control {
+    /* tăng kích thước thực thể */
+   padding: 10px;
+   /* tạo đường viền */
+   border: 1px solid #ccc;
+   /* đưa về kích thước 100% chiều rộng */
+   width: 100%;
+}
+/* MAP SECTION */
+.map-section img {
+    width: 100%;
+}
+/* SECTION FOOTER */
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+   
+    
+}
+#footer .socials-list {
+   font-size: 24px;
+   
+}
+#footer .socials-list a {
+    text-decoration: none;
+    color: #333;
+ 
+ }
+ #footer .socials-list a:hover,
+ #footer .coppyright a:hover  {
+     color: #ccc;
+ }
+#footer .coppyright {
+    font-size: 15px;
+    margin-top: 15px;
+    color: #333;
+}
+#footer .coppyright a {
+    color: #333;
+}
